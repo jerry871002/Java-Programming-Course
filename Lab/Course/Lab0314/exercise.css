@@ -1,0 +1,51 @@
+#label1 {
+    -fx-font: italic bold 24pt Arial;
+    -fx-text-fill: rgb(16, 22, 154);
+    -fx-alignment: center;
+    -fx-wrap-text: true;
+    -fx-text-alignment: justify;
+}
+
+Line, Rectangle, Circle, Ellipse, Arc {
+    -fx-stroke-width: 5;
+}
+
+#line1 {
+    -fx-stroke: blue;
+    -fx-stroke-line-cap: round;
+    -fx-stroke-dash-array: 10px;
+    -fx-stroke-dash-offset: 15;
+    -fx-stroke-line-join: bevel;
+}
+
+Rectangle {
+    -fx-stroke: red;
+    -fx-arc-width: 50;
+    -fx-arc-height: 50;
+    -fx-fill: yellow;
+    -fx-fill: image-pattern("Java_logo1.png");
+}
+
+Circle {
+    -fx-stroke: blue;
+    /* -fx-fill: radial-gradient(center 45% 30%, radius 70%, white, orange); */
+    -fx-fill: image-pattern("Java_logo3.png");
+    -fx-stroke-type: inside;
+    -fx-smooth: false;
+    -fx-focus-traversable: true;
+}
+
+Ellipse {
+    -fx-stroke: green;
+    -fx-fill: image-pattern("Java_logo2.png");
+    -fx-rotate: 30;
+}
+
+Arc {
+    -fx-stroke: purple;
+    /* -fx-fill: linear-gradient(to right, cyan, white); */
+    -fx-fill: image-pattern("Java_logo4.png");
+    -fx-smooth: false;
+    -fx-opacity: 0.6;
+    -fx-rotate: 45;
+}

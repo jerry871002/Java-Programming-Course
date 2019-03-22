@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.control.Label?>
+
+<Pane id="Pane" prefHeight="170.0" prefWidth="630.0"
+    stylesheets="@exercise.css"
+    xmlns="http://javafx.com/javafx/8.0.60"
+    xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Line fx:id="line1" endX="620.0" endY="160.0"
+            startX="10.0" startY="160.0" />
+        <Rectangle fx:id="rectangle" height="100.0" layoutX="10.0"
+            layoutY="50.0" width="100.0" />
+        <Circle fx:id="circle" centerX="170.0" centerY="100.0"
+            radius="45.0" />
+        <Ellipse fx:id="ellipse" centerX="320.0" centerY="100.0"
+            radiusX="80.0" radiusY="45.0" />
+        <Arc fx:id="arc" centerX="520.0" centerY="100.0" length="270.0"
+            radiusX="90.0" radiusY="45.0" startAngle="45.0" type="ROUND" />
+        <Label fx:id="label1" text="These are the logo of Java" />
+    </children>
+</Pane>

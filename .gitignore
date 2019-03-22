@@ -1,0 +1,9 @@
+*.class
+*.gz
+*.zip
+
+Documentation/*
+
+Textbook/*
+
+參考資料/*
