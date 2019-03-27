@@ -1,6 +1,7 @@
 *.class
 *.gz
 *.zip
+*.7z
 
 Documentation/*
 
