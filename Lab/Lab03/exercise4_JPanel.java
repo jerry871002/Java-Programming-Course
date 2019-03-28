@@ -1,12 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
 
-class exercise3_JPanel extends JPanel {
+class exercise4_JPanel extends JPanel {
     int size, degree;
     String[] colorStr = new String[5];
     Color[] color = new Color[5];
 
-    public exercise3_JPanel() {
+    public exercise4_JPanel() {
         // Do nothing
     }
 
@@ -24,27 +24,27 @@ class exercise3_JPanel extends JPanel {
         g.drawOval((int)(x-radius), (int)(y-radius), (int)(2*radius), (int)(2*radius));
     }
 
-    // draw mark
-    public void drawMark(Graphics g, double x, double y, double radius) {
-        int delta = 5;
-        double radian = degree * Math.PI / 180;
-        double sin = Math.sin(radian);
-        double cos = Math.cos(radian);
-
-        g.setColor(color[1]);
-        drawCross(g, x+radius*cos, y-radius*sin, delta);
-        g.setColor(color[2]);
-        drawCross(g, x-radius*sin, y-radius*cos, delta);
-        g.setColor(color[3]);
-        drawCross(g, x-radius*cos, y+radius*sin, delta);
-        g.setColor(color[4]);
-        drawCross(g, x+radius*sin, y+radius*cos, delta);
-    }
-
-    public void drawCross(Graphics g, double x, double y, int delta) {
-        g.drawLine((int)(x-delta), (int)(y-delta), (int)(x+delta), (int)(y+delta));
-        g.drawLine((int)(x-delta), (int)(y+delta), (int)(x+delta), (int)(y-delta));
-    }
+    // // draw mark
+    // public void drawMark(Graphics g, double x, double y, double radius) {
+    //     int delta = 5;
+    //     double radian = degree * Math.PI / 180;
+    //     double sin = Math.sin(radian);
+    //     double cos = Math.cos(radian);
+    //
+    //     g.setColor(color[1]);
+    //     drawCross(g, x+radius*cos, y-radius*sin, delta);
+    //     g.setColor(color[2]);
+    //     drawCross(g, x-radius*sin, y-radius*cos, delta);
+    //     g.setColor(color[3]);
+    //     drawCross(g, x-radius*cos, y+radius*sin, delta);
+    //     g.setColor(color[4]);
+    //     drawCross(g, x+radius*sin, y+radius*cos, delta);
+    // }
+    //
+    // public void drawCross(Graphics g, double x, double y, int delta) {
+    //     g.drawLine((int)(x-delta), (int)(y-delta), (int)(x+delta), (int)(y+delta));
+    //     g.drawLine((int)(x-delta), (int)(y+delta), (int)(x+delta), (int)(y-delta));
+    // }
 
     public void send(int size, int degree, String[] color) {
         this.size = size;

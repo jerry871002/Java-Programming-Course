@@ -32,9 +32,5 @@ public class exercise3_JFrame extends JFrame implements ActionListener {
 
         panel.setPreferredSize(new Dimension(size, size));
         pack();
-
-        panel.repaint();
-
-        //System.out.printf("%d %d%n", size, degree);
     }
 }

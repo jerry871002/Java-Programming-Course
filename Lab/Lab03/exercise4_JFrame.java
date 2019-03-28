@@ -2,13 +2,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class exercise3_JFrame extends JFrame implements ActionListener {
+public class exercise4_JFrame extends JFrame implements ActionListener {
     int size, degree;
     String[] color = new String[5];
-    exercise3_JPanel panel = new exercise3_JPanel();
+    exercise4_JPanel panel = new exercise4_JPanel();
     JTextField textField = new JTextField();
 
-    public exercise3_JFrame() {
+    public exercise4_JFrame() {
         add(panel);
         add(textField, BorderLayout.SOUTH);
         panel.setPreferredSize(new Dimension(500, 500));
@@ -32,9 +32,5 @@ public class exercise3_JFrame extends JFrame implements ActionListener {
 
         panel.setPreferredSize(new Dimension(size, size));
         pack();
-
-        panel.repaint();
-
-        //System.out.printf("%d %d%n", size, degree);
     }
 }
