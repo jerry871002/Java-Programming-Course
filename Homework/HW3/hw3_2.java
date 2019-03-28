@@ -1,7 +1,3 @@
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
 public class hw3_2 {
     public static void main(String[] args) {
         double x[] = new double[]{-1, -1, 1, 2, 2, 3 ,4 ,4};
