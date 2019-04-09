@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 class exercise4_JPanel extends JPanel {
-    int size, degree;
+    int size, degree, order;
     String[] colorStr = new String[5];
     Color[] color = new Color[5];
 
@@ -46,9 +46,10 @@ class exercise4_JPanel extends JPanel {
     //     g.drawLine((int)(x-delta), (int)(y+delta), (int)(x+delta), (int)(y-delta));
     // }
 
-    public void send(int size, int degree, String[] color) {
+    public void send(int size, int degree, int order, String[] color) {
         this.size = size;
         this.degree = degree;
+        this.order = order;
         this.colorStr = color;
 
         for(int i = 0; i < 5; i++) {
