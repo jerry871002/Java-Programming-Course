@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class exercise1 {
+public class hw4_1 {
     static int size;
     static int[][] pascalTri;
 

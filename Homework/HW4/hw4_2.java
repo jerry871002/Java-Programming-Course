@@ -3,14 +3,14 @@ import javax.swing.event.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class exercise2 extends JFrame implements ActionListener {
+public class hw4_2 extends JFrame implements ActionListener {
     JLabel[] seats;
     boolean[] avaiable;
     JButton request;
     boolean firstFull = false;
     boolean economyFull = false;
 
-    public exercise2() {
+    public hw4_2() {
         super("Airline Reservation System");
 
         seats = new JLabel[10];
@@ -102,7 +102,7 @@ public class exercise2 extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        exercise2 f = new exercise2();
+        hw4_2 f = new hw4_2();
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setSize(5000, 150);
         f.setVisible(true);
