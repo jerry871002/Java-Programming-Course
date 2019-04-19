@@ -2,9 +2,12 @@
 *.gz
 *.zip
 *.7z
+*.doc
 
 Documentation/*
 
 Textbook/*
 
 參考資料/*
+
+Source\ Code/*

@@ -18,7 +18,6 @@ public class exercise3_test extends JFrame implements ActionListener {
         super("A simple paint program");
 
         paintPanel = new exercise3();
-        // paintPanel.setOpaque(false);
         add(paintPanel, BorderLayout.CENTER);
 
         controlButtons = new JPanel();
