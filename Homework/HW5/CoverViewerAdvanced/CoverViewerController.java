@@ -4,8 +4,10 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
+import javafx.scene.control.ListCell;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.util.Callback;
 
 public class CoverViewerController {
 
@@ -40,6 +42,15 @@ public class CoverViewerController {
                     }
                 }
             );
+
+        booksListView.setCellFactory(
+            new Callback<ListView<Book>, ListCell<Book>>() {
+                @Override
+                public ListCell<Book> call(ListView<Book> listView) {
+                    return new ImageTextCell();
+                }
+            }
+        );
     }
 
 }
