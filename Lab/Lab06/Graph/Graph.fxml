@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- PolyShapes.fxml -->
+<!-- GUI for manipulating a Polyline, a Polygon -->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphController">
+    <padding>
+        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+    </padding>
+    <center>
+        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets left="8.0"/>
+            </BorderPane.margin>
+            <children>
+                <Polyline fx:id="polyline" fill="WHITE" layoutX="0.0" layoutY="0.0" strokeWidth="3.0"/>
+                <Rectangle fill="#ffffff00" height="510.0" layoutX="-5.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" width="510.0"/>
+                <Line fx:id="axisx" endX="500.0" endY="250.0" startY="250.0"/>
+                <Line fx:id="axisy" endX="250.0" endY="500.0" startX="250.0"/>
+                <Label fx:id="labelx" layoutX="470.0" layoutY="250.0" text="x">
+                    <font>
+                        <Font name="Monospaced Regular" size="30.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="labely" layoutX="260.0" text="y">
+                    <font>
+                        <Font name="Monospaced Regular" size="30.0"/>
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+    </center>
+    <top>
+        <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Graph">
+                    <font>
+                        <Font name="Monospaced Regular" size="50.0"/>
+                    </font>
+                </Label>
+                <Separator prefHeight="20.0"/>
+                <HBox alignment="CENTER">
+                    <children>
+                        <Label alignment="CENTER" text="f(x)=">
+                            <font>
+                                <Font name="Monospaced Regular" size="20.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="textfield" onAction="#onActionTextfield" prefWidth="400.0" text="100*cos(x/15-PI/4)+x">
+                            <font>
+                                <Font name="Monospaced Regular" size="20.0"/>
+                            </font>
+                        </TextField>
+                    </children>
+                </HBox>
+                <Separator prefHeight="20.0"/>
+                <HBox alignment="CENTER">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="xmin"/>
+                        <TextField onAction="#onChangeSize" promptText="x min" text="-250" fx:id="xmin">
+                            <HBox.margin>
+                                <Insets right="10.0"/>
+                            </HBox.margin>
+                        </TextField>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="xmax"/>
+                        <TextField onAction="#onChangeSize" text="250" fx:id="xmax">
+                            <HBox.margin>
+                                <Insets right="10.0"/>
+                            </HBox.margin>
+                        </TextField>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ymin"/>
+                        <TextField fx:id="ymin" onAction="#onChangeSize" text="-250">
+                            <HBox.margin>
+                                <Insets right="10.0"/>
+                            </HBox.margin>
+                        </TextField>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ymax"/>
+                        <TextField fx:id="ymax" onAction="#onChangeSize" text="250">
+                            <HBox.margin>
+                                <Insets/>
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+                <Separator prefHeight="20.0"/>
+            </children>
+        </VBox>
+    </top>
+</BorderPane>
